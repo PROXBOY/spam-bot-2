@@ -14,7 +14,7 @@ from userbot.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "𝕄𝔸𝔽𝕀𝔸 𝕌𝕊𝔼ℝ𝔹𝕆𝕋"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MAFIA USERBOT"
 
 # Thanks to Sipak bro and Raganork.. 
 # animation Idea by @NOOB_GUY_OP (Sipakisking)
@@ -38,25 +38,28 @@ file2 = "https://telegra.ph/file/d938d8f4ecaf2d6e70d31.mp4"
 file3 = "https://telegra.ph/file/52e33f519c5b932082298.mp4"
 file4 = "https://telegra.ph/file/cfd9a3fa2c8a7aba0d5ab.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = "__**🔥🔥𝕄𝔸𝔽𝕀𝔸 𝕌𝕊𝔼ℝ𝔹𝕆𝕋 𝕀𝕊 𝔸𝕃𝕀𝕍𝔼🔥🔥**__\n\n"
+pm_caption = "__**🔥🔥MAFIA USERBOT IS ALIVE🔥🔥**__\n\n"
 
 pm_caption += (
-    f"                 👑𝕄𝔸𝕊𝕋𝔼ℝ👑\n**  『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
+    f"❤️ MASTER:\n**  『[{DEFAULTUSER}](tg://user?id={mafia})』**\n\n"
 )
 
-pm_caption += "🛡️TELETHON🛡️ : `1.15.0` \n\n"
+pm_caption += "🛡️TELETHON: `1.15.0` \n\n"
 
-pm_caption += f"😈𝕄𝔸𝔽𝕀𝔸 𝕌𝕊𝔼ℝ𝔹𝕆𝕋😈 : `{mafiaversion}`\n\n"
+pm_caption += f"😈MAFIA USERBOT: `{mafiaversion}`\n\n"
 
-pm_caption += f"😱Sudo😱            : `{sudou}`\n\n"
+pm_caption += f"😱SUDO: `{sudou}`\n\n"
 
-pm_caption += "😇CHANNEL😇️   : [ᴊᴏɪɴ](https://t.me/MAFIA_USERBOT)\n\n"
+pm_caption += "😇CHANNEL: [ᴊᴏɪɴ](https://t.me/MAFIA_USERBOT)\n\n"
 
-pm_caption += "😎CREATOR😎    : [Himanshu](https://t.me/H1M4N5HU0P)\n\n"
+pm_caption += "😎CREATOR: [Himanshu](https://t.me/H1M4N5HU0P)\n\n"
 
-pm_caption += "🤩SUPPORTER🤩    :[HellBoy](https://t.me/kraken_the_badass)\n\n"
+pm_caption += "🤩SUPPORTER:[HellBoy](https://t.me/kraken_the_badass)\n\n"
 
 pm_caption += "      [🔥REPO🔥](https://github.com/H1M4N5HU0P/MAFIA-USERBOT) 🔹 [📜License📜](https://github.com/H1M4N5HU0P/MAFIA-USERBOT/blob/main/LICENSE)"
+
+
+  BUTTON = [[Button.url("REPO", "https://t.me/H1M4N5HU0P/MAFIA-USERBOT"), Button.url("DEVLOPER", "https://t.me/H1M4N5HU0P")]]
 
 # @command(outgoing=True, pattern="^.alive$")
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
@@ -88,5 +91,5 @@ async def amireallyalive(alive):
     ok7 = await borg.edit_message(alive.chat_id, ok6, file=file1)
 
     """ For .alive command, check if the bot is running.  """
-    await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
+    await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption, buttons=BUTTON)
     await alive.delete()
